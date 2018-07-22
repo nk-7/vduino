@@ -41,7 +41,7 @@ class Button {
 		unsigned long _previous_HIGH_millis = 0;
 		unsigned long _gap = 0;
 		unsigned long _milliseconds = 0;
-		boolean _debug = false;
+		boolean _debug = true;
 		int _minimum_gap = 35;
 		int _maximum_gap = 1000;
 		void (*__on_release)();

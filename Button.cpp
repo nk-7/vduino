@@ -14,7 +14,7 @@ void do_nothing() {
 Button::Button(int pin) {
 	pinMode(pin, INPUT_PULLUP);
 	_pin = pin;
-	if(this->_debug) Serial.begin(9600);
+	if(this->_debug) Serial.begin(115200);
 	this->on_release(do_nothing);
 	this->on_press(do_nothing);
 	this->on_bounced_release(do_nothing);

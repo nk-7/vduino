@@ -9,7 +9,7 @@ LiquidCrystal lcd(4, 5, 10, 11, 12, 13);
 Button gButton = Button(A0);
 Button yButton = Button(A1);
 Button bButton = Button(A2);
-BeepController beepController = BeepController(3,  MyLed(A3),  MyLed(A4),  MyLed(A5));
+BeepController beepController = BeepController(3,  MyLed(A3),  MyLed(A4),  MyLed(A5),lcd);
 
 void clk400() {
  beepController.clicked400();
@@ -31,7 +31,7 @@ void setup() {
     bButton.on_press(clk3700);
     lcd.begin(16, 2);
     lcd.setCursor(0, 0);
-    lcd.print("Privet rodnaya!");
+    lcd.clear();
 }
 
 void loop() {

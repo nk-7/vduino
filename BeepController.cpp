@@ -19,9 +19,13 @@ void BeepController::clicked3700() {
 }
 
 void BeepController::update(byte state) {
+  _lcd.clear();
   if(state==0){
     noTone(_beepPin);
+    _lcd.print(0);
   }else{
-  tone(_beepPin, _states[state]);
+    int hz =_states[state];
+    tone(_beepPin, hz);
+    _lcd.print(hz);
   }
 }

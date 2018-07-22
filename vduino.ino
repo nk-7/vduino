@@ -25,7 +25,7 @@ void clk3700() {
 
 void setup() {
 
-    Serial.begin(9600);
+    Serial.begin(115200);
     gButton.on_press(clk400);
     yButton.on_press(clk1500);
     bButton.on_press(clk3700);

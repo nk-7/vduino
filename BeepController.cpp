@@ -28,4 +28,9 @@ void BeepController::update(byte state) {
     tone(_beepPin, hz);
     _lcd.print(hz);
   }
+
+  if(machine.update(state)){
+    _lcd.clear();
+    _lcd.print("*VZE*");
+  }
 }

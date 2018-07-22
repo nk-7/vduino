@@ -4,6 +4,7 @@
 #include "MyLed.h"
 #include "Arduino.h"
 #include "LiquidCrystal.h"
+#include "StateMachine.h"
 
   class BeepController {
   public:
@@ -22,6 +23,7 @@
     byte _stateIndex = 0;
     int _states[8] = {0, 400, 1500, 1900, 3700, 4100, 5200, 5600};
     void update(byte state);
+    StateMachine machine;
   };
 
 #endif

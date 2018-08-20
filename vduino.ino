@@ -3,6 +3,7 @@
 #include "LiquidCrystal.h"
 #include "MyLed.h"
 #include "BeepController.h"
+#include "Music.h"
 
 LiquidCrystal lcd(4, 5, 10, 11, 12, 13);
 
@@ -10,6 +11,7 @@ Button gButton = Button(A0);
 Button yButton = Button(A1);
 Button bButton = Button(A2);
 BeepController beepController = BeepController(3,  MyLed(A3),  MyLed(A4),  MyLed(A5),lcd);
+Music music = Music(3,A0,A1,A2,3000,500);
 
 void clk400() {
  beepController.clicked400();
@@ -38,4 +40,5 @@ void loop() {
     gButton.init();
     yButton.init();
     bButton.init();
+    music.tick();
 }
